@@ -1,0 +1,81 @@
+.page {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__block {
+    max-width: 374px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__content {
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 34px;
+    background-color: #17171C;
+}
+
+.icon__theme {
+    cursor: pointer;
+}
+
+.number__block {
+    display: flex;
+    height: 64px;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 16px;
+}
+
+.output {
+    font-size: 48px;
+    color: #fff;
+    overflow: hidden;
+    max-width: 343px;
+}
+
+.btn__block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.btn__number {
+    border-radius: 12px;
+    background-color: #2e2f38;
+    border: 1px solid #2E2F38;
+    color: white;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    cursor: pointer;
+} 
+
+.blue {
+    background-color: #4B5EFC;
+}
+
+.active {
+    border: 1px solid #fff;
+}
+
+.light {
+    background-color: #F1F2F3;
+    color: #000;
+}
+
+.light__btn {
+    background-color: #D2D3DA;
+    color: #000;
+    border: none;
+}
