@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import "./index.css";
 
 
@@ -49,8 +49,19 @@ const Calculator: React.FC = () => {
     )
     }
 
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            setTheme(savedTheme)
+        }
+    }, [])
+
     const handleTheme = () => {
-        setTheme(prevTheme => prevTheme === "dark" ? "light" : "dark");
+        setTheme(prevTheme => {
+            const newTheme = prevTheme === "dark" ? "light" : "dark";
+            localStorage.setItem("theme", newTheme);
+            return newTheme
+        });
         
     }
 
@@ -102,11 +113,30 @@ const Calculator: React.FC = () => {
         setOutput((num * -1).toString());
     };
 
+
     const handleCalculate = () => {
         try {
-            if (pendingValue !== null && lastOperator) {
-                const result = eval(`${pendingValue} ${lastOperator} ${output}`)
-                setOutput(result.toString());
+            if (pendingValue !== null && lastOperator && output) {
+                let result;
+                const pending = parseFloat(pendingValue);
+                const current = parseFloat(output);
+                switch (lastOperator) {
+                    case "+":
+                        result = pending + current;
+                        break;
+                    case "-":
+                        result = pending - current;
+                        break;
+                    case "/":
+                        result = pending / current;
+                        break;
+                    case "*":
+                        result = pending * current
+                        break;
+                    default:
+                        return;
+                }
+                setOutput(result.toString().slice(0, MAX_LENGHT));
                 setPendingValue(null);
                 setLastOperator(null);
                 setActiveOperator(null);

@@ -29,6 +29,7 @@
 
 .number__block {
     display: flex;
+    max-width: 280px;
     height: 64px;
     flex-direction: column;
     align-self: flex-end;
