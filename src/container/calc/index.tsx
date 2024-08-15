@@ -180,7 +180,7 @@ const Calculator: React.FC = () => {
                         <button onClick={() => handleClick("7")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>7</button>
                         <button onClick={() => handleClick("8")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>8</button>
                         <button onClick={() => handleClick("9")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>9</button>
-                        <button onClick={() => handleOperatorClick("*")} className="btn__number blue">
+                        <button onClick={() => handleOperatorClick("*")} className={`btn__number ${activeOperator === "*" ? " active" : ""} blue`}>
                             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12.6018 14.896L0.18575 2.48L1.88175 0.783998L14.2978 13.2L12.6018 14.896ZM1.88175 14.896L0.18575 13.2L12.6018 0.783998L14.2978 2.48L1.88175 14.896Z" fill="white"/>
                             </svg>
@@ -188,11 +188,11 @@ const Calculator: React.FC = () => {
                         <button onClick={() => handleClick("4")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>4</button>
                         <button onClick={() => handleClick("5")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>5</button>
                         <button onClick={() => handleClick("6")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>6</button>
-                        <button onClick={() => handleOperatorClick("-")} className="btn__number blue">-</button>
+                        <button onClick={() => handleOperatorClick("-")} className={`btn__number ${activeOperator === "-" ? " active" : ""} blue`}>-</button>
                         <button onClick={() => handleClick("1")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>1</button>
                         <button onClick={() => handleClick("2")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>2</button>
                         <button onClick={() => handleClick("3")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>3</button>
-                        <button onClick={() => handleOperatorClick("+")} className="btn__number blue">+</button>
+                        <button onClick={() => handleOperatorClick("+")} className={`btn__number ${activeOperator === "+" ? " active" : ""} blue`}>+</button>
                         <button onClick={() => handleClick(".")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>.</button>
                         <button onClick={() => handleClick("0")} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>0</button>
                         <button onClick={() => deleteLastChart()} className={`btn__number ${theme === "light" ? "light__btn" : ""}`}>
