@@ -30,7 +30,7 @@
     flex-direction: column;
     align-items: center;
     gap: 34px;
-    background-color: #17171C;
+    background-color: var(--bg-color);
 }
 
 .icon__theme {
@@ -48,7 +48,7 @@
 
 .output {
     font-size: 48px;
-    color: #fff;
+    color: var(--color-white);
     overflow: hidden;
     max-width: 343px;
 }
@@ -61,8 +61,8 @@
 
 .btn__number {
     border-radius: 12px;
-    background-color: #2e2f38;
-    border: 1px solid #2E2F38;
+    background-color: var(--btn-num-bg-color);
+    border: 1px solid var(--btn-num-bg-color);
     color: white;
     font-size: 32px;
     display: flex;
@@ -73,7 +73,7 @@
 } 
 
 .blue {
-    background-color: #4B5EFC;
+    background-color: var(--color-blue);
 }
 
 .active {
@@ -81,12 +81,12 @@
 }
 
 .light {
-    background-color: #F1F2F3;
-    color: #000;
+    background-color: var(--theme-light-bg);
+    color: var(--color-black);
 }
 
 .light__btn {
-    background-color: #D2D3DA;
-    color: #000;
+    background-color: var(--light-btn-bg);
+    color: var(--color-black);
     border: none;
 }
